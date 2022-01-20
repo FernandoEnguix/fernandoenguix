@@ -1,0 +1,221 @@
+    * {
+        box-sizing: border-box;
+    }
+    
+    .field {
+        /* margen superior izquierdo */
+        margin: 10px;
+        background-color: red;
+        display: grid;
+        gap: .5rem;
+        grid-template-columns: repeat(5, 5.5rem) 3rem repeat(5, 5.5rem);
+        grid-template-rows: repeat(5, 6rem);
+        justify-content: center;
+        padding-top: 1rem;
+    }
+    
+    .home,
+    .away {
+        width: 100%;
+        height: 100%;
+        border: 2px blue solid;
+        background-color: white;
+        border-radius: 0.5rem;
+    }
+    
+    .away {}
+    /* 
+.home,
+.away {
+ */
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    /* border-radius: .5rem; */
+    /* position: relative; */
+    /* font-size: 4rem;
+}
+ */
+    
+    .vs {
+        grid-row: span 5;
+    }
+    
+    .die {
+        margin: 0 auto 40px;
+        padding: 0;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        border: 1px solid purple;
+        perspective: 1000px;
+        perspective-origin: 50% 100%;
+    }
+    
+    #dice1 {
+        width: 100%;
+        height: 100%;
+        /* top: 100px; */
+        position: absolute;
+        transform-style: preserve-3d;
+        transition: transform 6s;
+    }
+    
+    #dice1:hover {
+        cursor: pointer;
+    }
+    
+    #dice1 div {
+        background: coral;
+        display: block;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border: 2px solid coral;
+        margin: 0 auto;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 500%;
+        text-align: center;
+        padding: 50px 0;
+    }
+    
+    #dice1 .front {
+        transform: translateZ(100px);
+    }
+    
+    #dice1 .back {
+        transform: rotateX(-180deg) translateZ(100px);
+    }
+    
+    #dice1 .right {
+        transform: rotateY(90deg) translateZ(100px);
+    }
+    
+    #dice1 .left {
+        transform: rotateY(-90deg) translateZ(100px);
+    }
+    
+    #dice1 .top {
+        transform: rotateX(90deg) translateZ(100px);
+    }
+    
+    #dice1 .bottom {
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+    
+    .dot {
+        display: block;
+        position: absolute;
+        /* con esto dibujo los puntos del dado */
+        width: 30px;
+        height: 30px;
+        /* color de los puntos */
+        background: #fff;
+        border-radius: 15px;
+    }
+    /* que cada uno de estos top y left dibujan un puntito en una cara */
+    
+    .dice-front .dot1 {
+        top: 85px;
+        left: 85px;
+    }
+    
+    .dice-back .dot1 {
+        top: 45px;
+        left: 45px;
+    }
+    
+    .dice-back .dot2 {
+        top: 125px;
+        left: 125px;
+    }
+    
+    .dice-right .dot1 {
+        top: 45px;
+        left: 45px;
+    }
+    
+    .dice-right .dot2 {
+        top: 85px;
+        left: 85px;
+    }
+    
+    .dice-right .dot3 {
+        top: 125px;
+        left: 125px;
+    }
+    
+    .dice-left .dot1 {
+        top: 45px;
+        left: 45px;
+    }
+    
+    .dice-left .dot2 {
+        top: 45px;
+        left: 125px;
+    }
+    
+    .dice-left .dot3 {
+        top: 125px;
+        left: 45px;
+    }
+    
+    .dice-left .dot4 {
+        top: 125px;
+        left: 125px;
+    }
+    
+    .dice-top .dot1 {
+        top: 45px;
+        left: 45px;
+    }
+    
+    .dice-top .dot2 {
+        top: 45px;
+        left: 125px;
+    }
+    
+    .dice-top .dot3 {
+        top: 85px;
+        left: 85px;
+    }
+    
+    .dice-top .dot4 {
+        top: 125px;
+        left: 45px;
+    }
+    
+    .dice-top .dot5 {
+        top: 125px;
+        left: 125px;
+    }
+    
+    .dice-bottom .dot1 {
+        top: 45px;
+        left: 45px;
+    }
+    
+    .dice-bottom .dot2 {
+        top: 45px;
+        left: 85px;
+    }
+    
+    .dice-bottom .dot3 {
+        top: 45px;
+        left: 125px;
+    }
+    
+    .dice-bottom .dot4 {
+        top: 125px;
+        left: 45px;
+    }
+    
+    .dice-bottom .dot5 {
+        top: 125px;
+        left: 85px;
+    }
+    
+    .dice-bottom .dot6 {
+        top: 125px;
+        left: 125px;
+    }
