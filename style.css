@@ -5,20 +5,35 @@
 }
 
 body {
-    /* background-color: #7400b8; */
-    background: radial-gradient(900px 900px at top center, #5e5e5e, #2d3334, #262626);
+    background: radial-gradient(circle at top center, #5e5e5e, #2d3334, #262626);
     background-repeat: no-repeat;
+    height: 1000px;
+}
+
+h1 {
+    margin-left: 0.5rem;
 }
 
 #headingUnderline {
     background-image: linear-gradient(130deg, #1DB9C3 15%, #7027A0 45%, #C32BAD 85%);
     border-radius: 1rem;
-    width: 30rem;
+    width: 31rem;
     height: 1rem;
     border: 0;
     position: relative;
-    top: -2.2rem;
+    top: -2.25rem;
     z-index: -1;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3)
+}
+
+#authorName {
+    position: absolute;
+    right: 1rem;
+    top: -1rem;
+    border: 1px solid red;
+    border-radius: 1rem 0 2rem 0;
+    padding: 0.3rem 1.5rem;
+    background-color: rgba(20, 0, 0, 0.1);
 }
 
 li {
@@ -55,13 +70,26 @@ dd {
 }
 
 #underConstruction {
-    color: red;
-    /* background-color: yellow; */
-    background: linear-gradient(130deg, #ff7a18, #af002d 41.07%, #319197 76.05%);
     opacity: 80%;
-    rotate: -22deg;
-    width: fit-content;
-    border-radius: 2rem;
-    text-align: center;
-    padding: .5rem;
+    position: relative;
+}
+
+@keyframes rotateImg {
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+}
+
+#underConstruction>img {
+    width: 10%;
+    height: auto;
+    margin-left: 50%;
+    animation: rotateImg 6s alternate-reverse infinite;
 }
