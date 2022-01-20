@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap');
+* {
+    color: ivory;
+    font-family: 'Quattrocento Sans', sans-serif;
+}
+
+body {
+    /* background-color: #7400b8; */
+    background: radial-gradient(900px 900px at top center, #5e5e5e, #2d3334, #262626);
+    background-repeat: no-repeat;
+}
+
+#headingUnderline {
+    background-image: linear-gradient(130deg, #1DB9C3 15%, #7027A0 45%, #C32BAD 85%);
+    border-radius: 1rem;
+    width: 30rem;
+    height: 1rem;
+    border: 0;
+    position: relative;
+    top: -2.2rem;
+    z-index: -1;
+}
+
+li {
+    color: #ffd700;
+}
+
+li::marker {
+    color: #80ffdb;
+    content: "»";
+    font-size: 1.2rem;
+    /* border: 1px red solid;
+    box-shadow: 3px 3px black; */
+}
+
+a {
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.2);
+    padding: 0.2rem 0.5rem;
+    margin-left: .3rem;
+    text-decoration: none;
+}
+
+a:link {
+    background-color: #ffc0cb88;
+}
+
+a:visited {
+    background-color: #ffc0cb22;
+    text-decoration: underline;
+}
+
+dd {
+    padding: 0.5rem;
+}
+
+#underConstruction {
+    color: red;
+    /* background-color: yellow; */
+    background: linear-gradient(130deg, #ff7a18, #af002d 41.07%, #319197 76.05%);
+    opacity: 80%;
+    rotate: -22deg;
+    width: fit-content;
+    border-radius: 2rem;
+    text-align: center;
+    padding: .5rem;
+}
